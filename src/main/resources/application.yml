@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: oauth-jwt-auth-service
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/authdb}
+    username: ${DB_USERNAME:authuser}
+    password: ${DB_PASSWORD:authpass}
+  jpa:
+    hibernate:
+      # Flyway is the single source of truth for schema. Hibernate never touches DDL.
+      ddl-auto: none
+    open-in-view: false
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+
+server:
+  port: 8080
+  error:
+    include-message: never
+    include-stacktrace: never
+
+security:
+  jwt:
+    issuer: portfolio-auth-service
+    access-token-ttl-seconds: ${JWT_ACCESS_TTL_SECONDS:900}
+    refresh-token-ttl-seconds: ${JWT_REFRESH_TTL_SECONDS:604800}
+
+ratelimit:
+  capacity: ${RATE_LIMIT_CAPACITY:10}
+  window-seconds: ${RATE_LIMIT_WINDOW_SECONDS:60}
+
+app:
+  seed-admin: ${APP_SEED_ADMIN:true}
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info

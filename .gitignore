@@ -1,8 +1,16 @@
 # Compiled class file
+target/
+!.mvn/wrapper/maven-wrapper.jar
 *.class
 
 # Log file
 *.log
+.idea/
+*.iml
+.vscode/
+.env
+*.pem
+.DS_Store
 
 # BlueJ files
 *.ctxt
