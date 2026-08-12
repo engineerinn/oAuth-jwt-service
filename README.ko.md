@@ -1,3 +1,4 @@
+> 🇺🇸 English version: [`README.md`](README.md)
 # OAuth2 / JWT 인증 서비스
 
 **Spring Boot 3**와 **Spring Security 6**로 구축한 실무형 인증·인가 서비스 — RS256 서명 JWT 액세스 토큰, 탈취 감지를 포함한 리프레시 토큰 로테이션, 역할 기반 접근 제어(RBAC), 그리고 레이트 리밋이 적용된 인증 엔드포인트를 제공합니다.
@@ -7,8 +8,6 @@
 ![Spring Security](https://img.shields.io/badge/Spring%20Security-6-green)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
-
-> 🇺🇸 English version: [`README.md`](README.md)
 
 ---
 
