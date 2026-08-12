@@ -1,4 +1,4 @@
-README.md → > 🇰🇷 한국어 버전: [README.ko.md](README.ko.md)
+ 한국어 버전: [README.ko.md](README.ko.md)
 # OAuth2 / JWT Authentication Service
 A production-shaped authentication and authorization service built with **Spring Boot 3** and **Spring Security 6** — RS256-signed JWT access tokens, rotating refresh tokens with theft detection, role-based access control, and rate-limited credential endpoints.
 
